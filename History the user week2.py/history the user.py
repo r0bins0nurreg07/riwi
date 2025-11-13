@@ -32,9 +32,6 @@ try:
 
     while opcion!=4:
 
-
-
-
             if opcion==1:
                 agregar_producto()
             elif opcion==2:
@@ -45,11 +42,8 @@ try:
 
             else:
                 print("Error al ingresar ")
-                
-
-            print("Opción no existente ")
-            
-    opcion=int(input("Ingrese la opcion que desea realizar--->"))
+                       
+            opcion=int(input("Ingrese la opcion que desea realizar--->"))
 
 except:
      print("SOlo se permite las opcinones parametrizadas ")

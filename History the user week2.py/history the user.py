@@ -2,7 +2,7 @@
 inventario=[]
 def agregar_producto():
     nombre=input("Ingrese el nombre --->")
-    precio=int(input("Ingrese el precio--->"))
+    precio=float(input("Ingrese el precio--->"))
     cantidad=int(input("Ingrese la cantidiad--->"))
     
 
@@ -24,26 +24,29 @@ def calcular_estadistica(inventario):
     return total
 
 
-print("<------Bienvenidos a inventario--->")
-print("Agregar producto(1)\n Mostrar inventario(2)\n Calcular estadísticas(3)\n Salir (4)")
-
 try:
-    opcion=int(input("Ingrese la opcion que desea realizar--->"))
-
-    while opcion!=4:
+   
+    check=True
+    while check:
+            print("<------Bienvenidos a inventario--->")
+            print("Agregar producto(1)\n Mostrar inventario(2)\n Calcular estadísticas(3)\n Salir (4)")
+            opcion=int(input("Ingrese la opcion que desea realizar--->"))
 
             if opcion==1:
                 agregar_producto()
+                
             elif opcion==2:
                 mostrar_inventario()
 
             elif opcion==3:
                 print(calcular_estadistica(inventario))
 
+            elif opcion==4:
+                break
+
             else:
                 print("Error al ingresar ")
                        
-            opcion=int(input("Ingrese la opcion que desea realizar--->"))
 
 except:
      print("SOlo se permite las opcinones parametrizadas ")
